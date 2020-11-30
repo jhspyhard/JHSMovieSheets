@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+JHS Season Sheets [Full Screen (1280x720)]
+Template Component
+Created by: JHSpyHard
+Based on Cylent's Showcase Mutliplex 1.2 Moviesheet Theme
+-->
+<Template>
+	<Settings>
+		<Directors Separator=", " MaximumValues="1" />
+		<Actors Separator=", " MaximumValues="5" />
+		<Genres Separator=", " MaximumValues="5" />
+		<Countries Separator=", " MaximumValues="2" />
+		<Studios Separator=", " MaximumValues="5" />
+		<Episodes Separator="&#xD;&#xA;"/>
+		<EpisodesNames Separator="&#xD;&#xA;"/>
+	</Settings>
+	<MediaFormats>
+		<MediaFormat Name="DVD" Text="DVD" Image="%PATH%\..\Common\media_format\dvd.png" />
+		<MediaFormat Name="BLURAY" Text="Blu-Ray" Image="%PATH%\..\Common\media_format\bluray.png" />
+		<MediaFormat Name="HDDVD" Text="HD DVD" Image="%PATH%\..\Common\media_format\hddvd.png" />
+	</MediaFormats>
+	<SoundFormats>
+		<SoundFormat Name="DD20" Text="Dolby Digital 2.0" Image="%PATH%\..\Common\sound_format\dd20.png" />
+		<SoundFormat Name="DD51" Text="Dolby Digital 5.1" Image="%PATH%\..\Common\sound_format\dd51.png" />
+		<SoundFormat Name="DD71" Text="Dolby Digital 7.1" Image="%PATH%\..\Common\sound_format\dd71.png" />
+		<SoundFormat Name="DTS51" Text="DTS 5.1" Image="%PATH%\..\Common\sound_format\dts51.png" />
+		<SoundFormat Name="DTS71" Text="DTS 7.1" Image="%PATH%\..\Common\sound_format\dts71.png" />
+	</SoundFormats>
+
+	<ImageDrawTemplate SDKVersion="2.0">
+		<OutputImageSettings ColorDepth="Format32bppAlpha" ImageFormat="Jpeg" JpegCompressionLevel="80" Dpi="96" />
+		<Canvas AutoSize="False" CenterElements="False" Height="720" Width="1280" Fill="Solid,16777215,-16777216,BackwardDiagonal,-1,-16777216,0,,Tile,None,50,100,,,,0,0,0,0,Line,True" />
+		<Elements>
+			<!-- General Moviesheet Image Features -->
+			<ImageElement Name="Background" X="0" Y="0" Width="1280" Height="690" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\RedVelvet.jpg" NullImageUrl="" />
+			<ImageElement Name="Floor" X="0" Y="0" Width="1280" Height="720" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\Floor.png" NullImageUrl="" />
+			<ImageElement Name="Dark Wall" X="35" Y="67" Width="1210" Height="595" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\DarkWall.png" NullImageUrl="" />
+			<ImageElement Name="Cover" X="80" Y="105" Width="215" Height="330" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%COVER% " NullImageUrl="" />
+			<ImageElement Name="MovieScreenshot1" X="325" Y="104" Width="592" Height="333" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%BACKGROUND%" NullImageUrl="" />
+			<ImageElement Name="StatisticBar" X="-1" Y="1" Width="1282" Height="720" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\Fanart1 Overlay.png" NullImageUrl=""/>
+			
+			<!-- Movie Sheet Image Masks -->
+			<ImageElement Name="FanartLayer" X="323" Y="103" Width="595" Height="334" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\FanartLayer.png" NullImageUrl="" />
+			<ImageElement Name="CoverLayer" X="80" Y="105" Width="215" Height="330" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\CoverLayer.png" NullImageUrl="" /> 
+			
+			<!-- Data Point Labels -->
+			<TextElement Name="Title" X="110" Y="674" Width="1030" Height="25" AutoSize="False" Multiline="False" Font="Arial,17,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="%TITLE%" TextAlignment="MiddleCenter" TextQuality="AntiAlias" />
+			<TextElement Name="Tagline" X="80" Y="80" Width="1135" Height="25" AutoSize="False" Multiline="True" Font="Arial,13,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="%TAGLINE%" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="Plot" X="80" Y="505" Width="1135" Height="82" AutoSize="False" Multiline="True" Font="Arial,13,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="Plot: %PLOT%" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="PlotBoldText" X="80" Y="505" Width="775" Height="159" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Plot:" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="Studios" X="80" Y="483" Width="1135" Height="25" AutoSize="False" Multiline="True" Font="Arial,13,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="Studios: %STUDIOS%" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="StudiosBoldText" X="80" Y="483" Width="775" Height="20" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Studios:" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="Year" X="80" Y="590" Width="250" Height="15" AutoSize="False" Multiline="False" Font="Arial,12,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="Released: %YEAR%" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="YearBoldText" X="80" Y="590" Width="250" Height="15" AutoSize="False" Multiline="False" Font="Arial,12,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Released:" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="Director" X="80" Y="462" Width="1135" Height="19" AutoSize="False" Multiline="True" Font="Arial,12,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="Director: %DIRECTORS%" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="DirectorBoldText" X="80" Y="462" Width="250" Height="40" AutoSize="False" Multiline="False" Font="Arial,12,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Director:" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="Genre" X="80" Y="440" Width="1135" Height="20" AutoSize="False" Multiline="True" Font="Arial,12,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="Genre: %GENRES%" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="GenreBoldText" X="80" Y="440" Width="250" Height="63" AutoSize="False" Multiline="False" Font="Arial,12,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Genre:" TextAlignment="TopLeft" TextQuality="AntiAlias" />	
+			<TextElement Name="EpisodeNumbers" X="943" Y="104" Width="25" Height="387" AutoSize="False" Multiline="True" Font="Arial,12,Point,,0" ForeColor="-2578" StrokeColor="-16777216" StrokeWidth="0" Text="%EPISODELIST%" TextAlignment="TopLeft" TextQuality="AntiAlias"/>
+			<TextElement Name="EpisodeNames" X="970" Y="104" Width="254" Height="387" AutoSize="False" Multiline="True" Font="Arial,12,Point,,0" ForeColor="-2578" StrokeColor="-16777216" StrokeWidth="0" Text="%EPISODENAMESLIST%" TextAlignment="TopLeft" TextQuality="AntiAlias"/>
+			
+			<!-- Protocols -->
+			<ImageElement Name="MediaFormatLogo" X="126" Y="616" Width="40" Height="27" Source="Base64String" Offset="0" MultiPageIndex="-1" SourceData="%MEDIAFORMAT%" NullImageUrl="" />
+			<ImageElement Name="SoundFormatLogo" X="177" Y="616" Width="40" Height="27" Source="Base64String" Offset="0" MultiPageIndex="-1" SourceData="%SOUNDFORMAT%" NullImageUrl="" />
+			<ImageElement Name="ResolutionLogo" X="231" Y="616" Width="40" Height="27" Source="Base64String" Offset="0" MultiPageIndex="-1" SourceData="%RESOLUTION%" NullImageUrl="" />
+			<ImageElement Name="CertificationLogo" X="82" Y="614" Width="35" Height="30" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\us_certifications\%CERTIFICATION%.png" NullImageUrl="" />
+			
+			<!-- Subtitles -->
+			<TextElement Name="SubtitleTEXT" X="330" Y="623" Width="100" Height="27" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Subtitles:" TextAlignment="TopLeft" TextQuality="AntiAlias"/>
+			<ImageElement Name="SubtitleImage" X="430" Y="616" Width="30" Height="27" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\countries\%SUBTITLES1%.png" NullImageUrl=""/>
+
+			<!-- Video / Audio Quality Ratings -->
+			<TextElement Name="PQRatingText" X="873" Y="595" Width="150" Height="20" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Picture Quality:" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="PQRatingTextBold" X="873" Y="595" Width="150" Height="20" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="Picture Quality:" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<ImageElement Name="PQRatingStars" X="1000" Y="590" Width="135" Height="27" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\multi-stars.png" NullImageUrl="" PreserveMetaData="True">
+				<Actions>
+					<Crop X="0" Y="0" Width="135" Height="27" Center="False" PathPoints="" Roundness="0" AntiAlias="True" />
+				</Actions>
+			</ImageElement>
+			<TextElement Name="AQRatingText" X="883" Y="625" Width="150" Height="20" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<TextElement Name="AQRatingTextBold" X="883" Y="625" Width="150" Height="20" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-2039584" StrokeColor="-16777216" StrokeWidth="0" Text="" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			<ImageElement Name="AQRatingStars" X="1000" Y="620" Width="135" Height="27" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\multi-stars.png" NullImageUrl="" PreserveMetaData="True">
+				<Actions>
+					<Crop X="0" Y="0" Width="135" Height="27" Center="False" PathPoints="" Roundness="0" AntiAlias="True" />
+				</Actions>
+			</ImageElement>
+			<TextElement Name="PQRating" X="1140" Y="595" Width="92" Height="20" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="" TextAlignment="TopLeft" TextQuality="AntiAlias" />			
+			<TextElement Name="AQRating" X="1140" Y="625" Width="92" Height="20" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-4144960" StrokeColor="-16777216" StrokeWidth="0" Text="" TextAlignment="TopLeft" TextQuality="AntiAlias" />
+			
+			<!-- Rotten Tomatoes Elements -->
+			<ImageElement Name="RTTomatometer" X="780" Y="593" Width="27" Height="27" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\rotten_tomatoes\tomato-good.png" NullImageUrl="" />
+			<TextElement Name="RTTomatometerText" X="810" Y="593" Width="60" Height="27" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="" TextAlignment="MiddleLeft" TextQuality="AntiAlias" />
+			<ImageElement Name="FlixterRating" X="780" Y="623" Width="27" Height="27" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\rotten_tomatoes\popcorn-down.png" NullImageUrl="" />
+			<TextElement Name="FlixterRatingText" X="810" Y="623" Width="60" Height="27" AutoSize="False" Multiline="False" Font="Arial,13,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="20%" TextAlignment="MiddleLeft" TextQuality="AntiAlias" />
+			<ImageElement Name="RTSeparator" X="863" Y="590" Width="4" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\Separator.png" NullImageUrl="" />
+			
+			<!-- Statistic Box Values -->
+			<TextElement Name="VidBRTEXT" X="342" Y="408" Width="100" Height="20" AutoSize="False" Multiline="False" Font="Arial,10,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="%VIDEOBITRATETEXT%" TextAlignment="TopCenter" TextQuality="AntiAlias" />
+			<TextElement Name="fpsTEXT" X="434" Y="408" Width="100" Height="20" AutoSize="False" Multiline="False" Font="Arial,10,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="%FRAMERATETEXT%" TextAlignment="TopCenter" TextQuality="AntiAlias" />
+			<TextElement Name="AspectRatioTEXT" X="524" Y="408" Width="100" Height="20" AutoSize="False" Multiline="False" Font="Arial,10,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="%ASPECTRATIOTEXT%" TextAlignment="TopCenter" TextQuality="AntiAlias" />
+			<TextElement Name="AudBRTEXT" X="617" Y="408" Width="100" Height="20" AutoSize="False" Multiline="False" Font="Arial,10,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="%AUDIOBITRATETEXT%" TextAlignment="TopCenter" TextQuality="AntiAlias" />
+			<TextElement Name="AudChanTEXT" X="710" Y="408" Width="100" Height="20" AutoSize="False" Multiline="False" Font="Arial,10,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="%AUDIOCHANNELSTEXT%" TextAlignment="TopCenter" TextQuality="AntiAlias" />
+			
+			<TextElement Name="DiscTEXT" X="618" Y="622" Width="100" Height="20" AutoSize="False" Multiline="False" Font="Arial,10,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="Disc" TextAlignment="TopCenter" TextQuality="AntiAlias" />
+			<TextElement Name="SeasonTEXT" X="524" Y="622" Width="100" Height="20" AutoSize="False" Multiline="False" Font="Arial,10,Point,,0" ForeColor="-1" StrokeColor="-16777216" StrokeWidth="0" Text="%SEASON%" TextAlignment="TopCenter" TextQuality="AntiAlias" />
+			
+			<!-- Statistic Boxes -->
+			<ImageElement Name="vidBRbox" X="351" Y="387" Width="78" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\videobitrate.png" NullImageUrl=""/>
+			<ImageElement Name="vidFRbox" X="443" Y="387" Width="78" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\videoframerate.png" NullImageUrl=""/>
+			<ImageElement Name="vidARbox" X="535" Y="387" Width="78" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\Aspectratio.png" NullImageUrl=""/>
+			<ImageElement Name="AudBRbox" X="627" Y="387" Width="78" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\audiobitrate.png" NullImageUrl=""/>
+			<ImageElement Name="AudChanBox" X="719" Y="387" Width="78" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\channels.png" NullImageUrl=""/>
+			
+			<ImageElement Name="Seasonbox" X="535" Y="600" Width="78" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\SeasonNumber.png" NullImageUrl=""/>
+			<ImageElement Name="Discbox" X="627" Y="600" Width="78" Height="60" Source="File" Offset="0" MultiPageIndex="-1" SourceData="%PATH%\..\Common\DiscNumber.png" NullImageUrl=""/>
+			
+		</Elements>
+	</ImageDrawTemplate>
+</Template>
